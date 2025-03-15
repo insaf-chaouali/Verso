@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url("/images/utilisation-espace-client-sur-mobile-675d51b-1500x871.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+.navbar-brand {
+    color: #000 !important;
+    font-size: 25px !important;
+    font-weight: 600 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    color: #000 !important;
+    font-weight: 500 !important;
+    position: relative;
+    margin: 0 15px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.8);
+}
+
+main {
+    margin-top: 120px;
+    flex: 1;
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #000 !important;
+    border: 1px solid rgba(0, 0, 0, 0.3) !important;
+    border-radius: 30px !important;
+    padding: 10px 20px 10px 45px !important;
+    backdrop-filter: blur(5px);
+}
+
+.form-control::placeholder {
+    color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.form-control:focus {
+    border-color: rgba(0, 0, 0, 0.5) !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.btn-primary {
+    background: rgba(255, 255, 255, 0.4) !important;
+    border: 1px solid rgba(0, 0, 0, 0.3) !important;
+    color: #000 !important;
+    border-radius: 30px !important;
+    padding: 10px 25px !important;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: rgba(255, 255, 255, 0.6) !important;
+    border-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.table {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.table th {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.table td {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+.table tr:hover td {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.table th,
+.table td {
+    color: #000 !important;
+    vertical-align: middle;
+    padding: 15px !important;
+}
+
+.footer {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #000 !important;
+    position: relative;
+    z-index: 1000;
+    padding: 20px 0;
+}
+
+.social-links a {
+    color: #000 !important;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    margin: 0 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.social-links a:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+#loadingSpinner .spinner-border {
+    width: 3rem;
+    height: 3rem;
+    color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.navbar-toggler {
+    filter: invert(1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}

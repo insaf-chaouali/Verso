@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <a href="home.html" class="home-button">
+        <i class="fa fa-home"></i> Accueil
+    </a>
+    
+    <div class="underlay-photo"></div>
+    <div class="underlay-black"></div>
+    
+    <div class="container">
+        <form id="loginForm" class="login-form">
+            <p class="login-text">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-user-lock fa-stack-1x fa-inverse"></i>
+                </span>
+            </p>
+            
+            <div class="form-group">
+                <input type="text" 
+                       class="login-username" 
+                       id="username" 
+                       name="username" 
+                       placeholder="Nom d'utilisateur" 
+                       required 
+                       autocomplete="off">
+            </div>
+            
+            <div class="form-group">
+                <input type="password" 
+                       class="login-password" 
+                       id="password" 
+                       name="password" 
+                       placeholder="Mot de passe" 
+                       required>
+            </div>
+            <div class="btn-container"><button type="submit" class="login-submit">Se connecter</button></div>
+            
+            <p id="error-message" style="color: red;"></p>
+        </form>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+
+</html>

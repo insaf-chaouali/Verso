@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Professionnel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/professionnel.css">
+</head>
+
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Verso</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/login.html" id="logout">Déconnexion</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Profil -->
+    <div class="container mt-4">
+        <h2>Mon Profil</h2>
+        <form id="profileForm">
+            <div class="mb-3">
+                <label class="form-label">Nom :</label>
+                <input type="text" class="form-control" id="name" readonly>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email :</label>
+                <input type="email" class="form-control" id="email" readonly>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Métier :</label>
+                <input type="text" class="form-control" id="job" readonly>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Localisation :</label>
+                <input type="text" class="form-control" id="location" readonly>
+            </div>
+            <button type="button" id="editProfileBtn" class="btn btn-primary">Modifier le profil</button>
+            <button type="submit" id="saveProfileBtn" class="btn btn-success d-none">Enregistrer</button>
+        </form>
+    </div>
+
+
+
+
+    <!-- Section Rendez-vous -->
+    <div class="container mt-5">
+        <h2>Mes Rendez-vous</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Client</th>
+                    <th>Date</th>
+                    <th>Heure</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="appointmentList">
+                <tr>
+    
+                </tr>
+                <!-- D'autres rendez-vous seront affichés ici -->
+            </tbody>
+        </table>
+    <!--<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const socket = io();
+
+            // Listen for new appointments from the server
+            socket.on('newAppointment', function(appointment) {
+                const appointmentList = document.getElementById('appointmentList');
+                const newRow = document.createElement('tr');
+
+                // Populate the new row with appointment details
+                newRow.innerHTML = `
+                    <td>${appointment.client}</td>
+                    <td>${appointment.date}</td>
+                    <td>${appointment.time}</td>
+                    <td>
+                        <button class="btn btn-success accept-btn">Accepter</button>
+                        <button class="btn btn-danger cancel-btn">Annuler</button>
+                    </td>
+                `;
+
+                // Append the new row to the appointment list
+                appointmentList.appendChild(newRow);
+
+                // Add event listeners for the action buttons
+                newRow.querySelector('.accept-btn').addEventListener('click', function() {
+                    socket.emit('acceptAppointment', appointment.id);
+                    alert('Rendez-vous accepté.');
+                });
+
+                newRow.querySelector('.cancel-btn').addEventListener('click', function() {
+                    socket.emit('cancelAppointment', appointment.id);
+                    newRow.remove();
+                    alert('Rendez-vous annulé.');
+                });
+            });
+        });
+    </script> -->
+    </div>
+    <!--<script src="/socket.io/socket.io.js"></script>-->
+
+    <!-- Section Rendez-vous --
+    <div class="container mt-5">
+        <h2>Mes Rendez-vous</h2>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Client</th>
+                        <th>Date</th>
+                        <th>Heure</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="appointmentList">
+                    <!-- Les rendez-vous seront injectés ici -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="js/professionnel.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

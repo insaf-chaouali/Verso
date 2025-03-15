@@ -1,0 +1,141 @@
+/* Importation de Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,700");
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Bouton Accueil */
+.home-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.3); /* Plus de transparence */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.home-button:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+/* Conteneur principal */
+.container {
+    background-color: rgba(255, 255, 255, 0.6); /* Plus transparent */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 350px;
+    backdrop-filter: blur(5px); /* Effet verre dépoli */
+}
+
+/* Style du formulaire */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Style des groupes de champs */
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Champs de saisie */
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+    transition: 0.3s;
+    background-color: rgba(255, 255, 255, 0.5); /* Légèrement transparent */
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #e67e22;
+    outline: none;
+    box-shadow: 0 0 5px rgba(230, 126, 34, 0.5);
+}
+
+/* Bouton d'inscription */
+.submit-btn {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #d35400;
+}
+
+/* Fond animé */
+.underlay-photo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('/images/illustration-fond-scintillant-eclat-dore-particules-eclatees_1017-42064.avif') no-repeat center center;
+    background-size: cover;
+    filter: grayscale(20%) brightness(1.2);
+    z-index: -1;
+    animation: hue-rotate 10s infinite alternate ease-in-out;
+}
+
+/* Animation pour un léger effet lumineux */
+@keyframes hue-rotate {
+    0% {
+        filter: grayscale(20%) brightness(1.2) hue-rotate(0deg);
+    }
+    100% {
+        filter: grayscale(20%) brightness(1.2) hue-rotate(30deg);
+    }
+}
+
+/* Masquer un élément */
+.d-none {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+    }
+}

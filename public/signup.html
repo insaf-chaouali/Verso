@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+    <a href="home.html" class="home-button">
+        <i class="fa fa-home"></i> Accueil
+    </a>
+    <div class="underlay-photo"></div>
+    
+    <div class="container">
+        <form id="signupForm" class="signup-form">
+            <div class="form-group">
+                <label for="username">Nom d'utilisateur :</label>
+                <input type="text" name="username" id="username" placeholder="Entrez votre nom d'utilisateur" required autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" name="email" id="email" placeholder="Entrez votre email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe :</label>
+                <input type="password" name="password" id="password" placeholder="Entrez votre mot de passe" required>
+            </div>
+            <div class="form-group">
+                <label for="role">Rôle :</label>
+                <select name="role" id="role" required onchange="toggleJobField()">
+                   <option  value="client">Client</option> 
+                   <!--- <option value="admin">Admin</option> -->
+                    <option value="professionnel">Professionnel</option>
+                </select>
+            </div>
+            <div class="form-group d-none" id="jobField">
+                <label for="job">Job :</label>
+                <select id="job" name="job">
+                    <option value="doctor">Doctor</option>
+                    <option value="lawyer">Lawyer</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dateOfBirth">Date de naissance :</label>
+                <input type="date" name="dateOfBirth" id="dateOfBirth">
+            </div>
+            <div class="form-group">
+                <label for="status">Statut :</label>
+                <input type="text" name="status" id="status" placeholder="Entrez votre statut">
+            </div>
+            <div class="form-group">
+                <label for="cityAddress">Adresse de la cité :</label>
+                <input type="text" name="cityAddress" id="cityAddress" placeholder="Entrez votre adresse">
+            </div>
+            <div class="form-group">
+                <label for="ville">Ville :</label>
+                <input type="text" name="ville" id="ville" placeholder="saisir votre ville">
+            </div>
+            <button type="submit" class="submit-btn">Inscription</button>
+        </form>
+        <p id="error-message" style="color: red; margin-top: 10px;"></p>
+    </div>
+
+    <script src="js/signup.js"></script>
+
+</body>
+</html>

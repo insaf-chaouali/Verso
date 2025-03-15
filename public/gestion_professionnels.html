@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Professionnels</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="gestion_clients.html">Gestion Clients</a></li>
+            <li><a href="gestion_professionnels.html">Gestion Professionnels</a></li>
+        </ul>
+    </nav>
+    <h1>Gestion des Professionnels</h1>
+    <input type="text" id="searchPro" placeholder="Rechercher par nom, métier ou adresse">
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Email</th>
+                <th>Métier</th>
+                <th>Adresse</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <table>
+            <tbody id="proTableBody"></tbody>
+        </table>
+    </table>
+    <script src="./js/gestion_professionnels.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Client</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/client.css">
+</head>
+
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Verso</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="./mes_rendez_vous.html">Mes Rendez-vous</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/profile">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login.html" id="logout">Déconnexion</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main class="container">
+        <!-- Section de recherche -->
+        <div class="search-box text-center">
+            <div class="input-group mx-auto" style="max-width: 600px;">
+                <input type="text" id="searchInput" class="form-control" placeholder="Ex: Médecin, Avocat">
+                <button onclick="rechercherProfessionnel()" class="btn btn-primary px-4">
+                    Rechercher
+                </button>
+            </div>
+        </div>
+
+        <!-- Spinner de chargement -->
+        <div id="loadingSpinner" class="d-none text-center mt-4">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Chargement...</span>
+            </div>
+        </div>
+
+        <!-- Section des résultats -->
+        <div class="results-section container d-none mt-4" id="resultsSection">
+            <h3 class="text-center text-black mb-4">Résultats de la recherche</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Métier</th>
+                        <th>Localisation</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="resultsBody">
+                    <!-- Les résultats seront injectés ici par JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-3 mt-auto">
+        <div class="container text-center">
+            <p class="mb-2">&copy; 2024 Rendez-vous. Tous droits réservés.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+   <!---<script src="/socket.io/socket.io.js"></script> -->
+
+   <script src="/socket.io/socket.io.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/client.js"></script>
+</body>
+</html>
